@@ -2,12 +2,6 @@ body {background-color:black;
 background-image:url(".gif");
 }
 #container {
-    width: 67%;
-    right:22px;
-    padding:22px;
-    background-color:3399ff;
-    text-align:center;
-    margin:0;
     line-height:2;
     letter-spacing:2px;
     font-family: sans-serif;
