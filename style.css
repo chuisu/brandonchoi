@@ -2,6 +2,7 @@ body {background-color:black;
 background-image:url(".gif");
 }
 #container {
+    text-align: center;
     line-height:2;
     letter-spacing:2px;
     font-family: sans-serif;
