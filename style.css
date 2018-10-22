@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
 body {
 background-image: url("impression.jpg");
 background-size: auto;
@@ -7,7 +9,9 @@ color: white;
 
 a, a:visited, a:hover {
 text-decoration: none;
-color: orange;
+color: black;
+font-family: Raleway;
+font-weight: bold;
 }
 
 #container {
@@ -19,7 +23,7 @@ min-height: 95vh;
 #impression {
 height: 30vh;
 margin: 0 0 0 0;
-padding: 0 0 20vh 0;
+padding: 0 0 45vh 0;
 /*background-color: cyan;*/
 }
 
@@ -59,15 +63,24 @@ margin: 0 1vw;
 }
 
 #mainTitle {
-text-align: center;
-padding: 10vh 0 0 0;
+margin: 10vh 35vw 0 35vw;
 }
 
 .primaryContent {
+font-family: Raleway;
+}
+
+section.primaryContent {
+margin: 0 0 5vh 0;
+}
+
+h3.primaryContent {
+letter-spacing: 1em;
 }
 
 .secondaryContent {
 line-height: 2em;
+font-family: Raleway;
 }
 
 #contentContainer {
