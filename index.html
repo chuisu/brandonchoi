@@ -1,25 +1,69 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="initial-scale=1.0" />
-	<link rel='stylesheet' href='style.css'/>
-	<script src='script.js'></script>
-	<title>Brandon Choi</title>
+  <title>Brandon Choi</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel='stylesheet' href='style.css'/>
+  <meta name="viewport" content="initial-scale=1.0" />
 </head>
+
 <body>
-    <div id="container">
-        <h1>Brandon Choi</h1>
-        <!--<div id="musicbox"></div>-->
-        <div id="bio">
-            <p>Trumpeter Brandon Choi comes from the Los Angeles area of Southern California, where his musical growth first began under the guidance of both classical and improvising trumpet teachers.</p>
-            <p>While in LA, Brandon performed with Gordon Goodwin, Tom Kubis, and funk band Big Bad Voodoo Daddy.</p>
-	    <p>He’s currently residing near Buffalo, New York, after having finished his degree at the Eastman School of Music, where he studied with professors Clay Jenkins, Bill Dobbins, and Harold Danko; and has played with such luminary musicians as Joe Martin, Jim McNeely, and Bill Holman.</p>
-	    <p>Brandon is very grateful and excited for the opportunity to have music in his life.</p>
-	</div>
-        <div id="contact">
-            choi.brandon.h@gmail.com <br>
-            (805) 551-7875
+  <div id="container">
+    <div id="impression">
+      <!-- nav bar spans whole top -->
+      <div id="nav">
+        <!-- vector icon goes here -->
+        <ul>
+          <li><a href="index.html">home</a></li>
+          <li><a href="music.html">music</a></li>
+          <li><a href="contact.html">contact</a></li>
+        </ul>
+      </div>
+      <h1 id="mainTitle">BRANDON CHOI</h1> <!-- this could also be a vector image of my signature -->
+      <div id="musicPlayer"><!-- A super obvious player would go here--></div>
+    </div>
+    <div id="transition"></div>
+    <div id="contentContainer">
+      <div class="primaryContent" id="main">
+      <section class="primaryContent" id="about">
+        <h3>ABOUT</h3>
+        <div class="secondaryContent" id="aboutInner">
+        <!-- fill this using a script that parses json -->
+              <p>Trumpeter Brandon Choi comes from the Los Angeles area of Southern California, where his musical growth first began under the guidance of both classical and improvising trumpet teachers.</p>
+              <p>While in LA, Brandon performed with Gordon Goodwin, Tom Kubis, and funk band Big Bad Voodoo Daddy.</p>
+  	    <p>He currently resides in Perrysburg, New York near Buffalo after having finished his degree at the Eastman School of Music, where he studied with professors Clay Jenkins, Bill Dobbins, and Harold Danko; and has played with such luminary musicians as Joe Martin, Jim McNeely, and Bill Holman.</p>
+  	    <p>Brandon is very grateful and excited for the opportunity to have music in his life.</p>
         </div>
+      </section>
+      <section class="primaryContent" id="thoughts">
+        <h3>THOUGHTS</h3>
+        <div class="secondaryContent" id="thoughtsInner">
+        <!-- fill this using a script that parses json -->
+          Maybe we should forgo the footer player and instead make the player under mainTitle stick to the top of the window when scrolling down.
+          Additionally, it may be cool to have a big 1920x1080 (at least) picture take up the whole screen, then animate shrink down to the div#impression, then blur.
+          What should the background behind this look like?
+          What colors should we use?
+          Need to remember that when the JS gets written for this, it needs to detect endline characters and put breaks in &lt;/br&gt;
+        </div>
+      </section>
+      </div>  
+    </div>
+    <div id="footerContainer"><div id="footer"></div></div>
     </div>
 </body>
+<script>
+
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("musicPlayer");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
 </html>
