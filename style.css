@@ -65,6 +65,7 @@ font-family: Raleway;
 text-align: left;
 font-weight: bold;
 font-size: 12pt;
+letter-spacing: 0.68vw;
 color: orange;
 text-shadow: -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #000, 0.5px 0.5px 0 #000;
 }
