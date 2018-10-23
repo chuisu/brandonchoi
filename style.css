@@ -71,6 +71,13 @@ text-shadow: -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #000, 0.5
 
 }
 
+
+@media only screen and (min-width: 1000px) {
+#nav ul {
+margin: 0 0 0 50vw;
+padding: 1vh 0;
+background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255, 255, 255, 0.8));
+}
 #nav {
 text-align: right;
 /*background-color: red;*/
@@ -79,10 +86,21 @@ background-size: 500px 400px;
 background-repeat: repeat-x;
 }
 
+}
+
+@media only screen and (max-width: 1000px) {
 #nav ul {
-margin: 0 0 0 50vw;
 padding: 1vh 0;
-background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255, 255, 255, 0.8));
+background-image: linear-gradient(0.25turn, rgba(255,0,0,0), rgba(255, 255, 255, 0.8), rgba(255,0,0,0));
+}
+
+#nav {
+text-align: center;
+/*background-color: red;*/
+background-image: url("blue-floral-design-4.jpg");
+background-size: 500px 400px;
+background-repeat: repeat-x;
+}
 }
 
 #nav ul li {
