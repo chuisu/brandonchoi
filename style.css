@@ -69,19 +69,22 @@ margin: 0;
 
 @keyframes musicPlayer_toolTip {
   to {
-    opacity: 0.1;
-    transform: translate3d(0, -0.3rem, 0);
+    opacity: 0.3;
+    transform: translate3d(0, -5px, 0);
   }
 }
 
 #musicPlayer_toolTip {
 display: flex;
 justify-content: center;
-margin: 0 0 -5px 0;
+font-family: Raleway;
+font-size: 8pt;
+font-weight: bold;
+height: inherit;
 }
 
 #musicPlayer_toolTip > div {
-  margin: 0 1vw;
+  margin: 8px 12px;
   animation: musicPlayer_toolTip 0.7s infinite alternate;
 }
 #musicPlayer_toolTip > div:nth-child(2) {
