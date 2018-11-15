@@ -2,7 +2,6 @@
 
 body#mainBody {
 background-image: url("impression.jpg");
-background-size: auto;
 background-repeat: no-repeat;
 }
 
@@ -23,6 +22,9 @@ min-height: 95vh;
 /*background-color: cyan;*/
 }
 
+/* music player for desktops */
+@media only screen and (min-width: 1000px) {
+
 #musicPlayer {
 background-color: orange;
 height: 20px;
@@ -38,6 +40,42 @@ left: -0.4vw;
 margin: 0 26vw 0 26vw;
 }
 
+#musicPlayer_toolTip {
+margin: 0;
+}
+
+}
+/* end music player for desktops */
+/* 
+#musicPlayer_progress to display: none while #musicPlayer_toolTip is in view.
+#musicPlayer_toolTip to display: none while #musicPlayer_progress is in view.
+*/
+
+/* music player for phones */
+
+@media only screen and (max-width: 1000px) {
+#musicPlayer {
+background-color: orange;
+height: 20px;
+margin: 0 30px;
+padding: 0 4vw;
+}
+
+#musicPlayer.sticky {
+position: fixed;
+z-index: 100;
+bottom: 0px;
+height: 60px;
+width: 100%;
+margin: 0;
+}
+
+#musicPlayer_toolTip {
+margin: 0;
+}
+
+}
+/* end music player for phones */
 #transition {
 margin: 0;
 padding: 5vw 0;
@@ -59,8 +97,7 @@ text-shadow: -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #000, 0.5
 
 @media only screen and (max-width: 1000px) {
 p#briefDescription {
-margin: 0 auto;
-width: 48vw;
+margin: 0 30px;
 font-family: Raleway;
 text-align: left;
 font-weight: bold;
@@ -146,11 +183,21 @@ margin: 0;
 background-color: rgba(155, 171, 198, 0.3);
 }
 
+@media only screen and (max-width: 1000px) {
+#main {
+margin: 0 30px;
+padding: 4vh 4vw; 
+background-color: rgba(0,0,0,0.3);
+}
+}
+
+@media only screen and (min-width: 1000px) {
 #main {
 margin: 0 auto;
 width: 40vw;
 padding: 4vh 4vw; 
 background-color: rgba(0,0,0,0.3);
+}
 }
 
 #footerContainer {
