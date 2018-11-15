@@ -21,7 +21,6 @@ min-height: 95vh;
 #impression {
 /*background-color: cyan;*/
 }
-
 /* music player for desktops */
 @media only screen and (min-width: 1000px) {
 
@@ -39,12 +38,8 @@ top: 0px;
 left: -0.4vw;
 margin: 0 26vw 0 26vw;
 }
-
-#musicPlayer_toolTip {
-margin: 0;
 }
 
-}
 /* end music player for desktops */
 /* 
 #musicPlayer_progress to display: none while #musicPlayer_toolTip is in view.
@@ -57,25 +52,60 @@ margin: 0;
 #musicPlayer {
 background-color: orange;
 height: 20px;
-margin: 0 30px;
+margin: 30px;
 padding: 0 4vw;
 }
 
 #musicPlayer.sticky {
 position: fixed;
-z-index: 100;
 bottom: 0px;
 height: 60px;
 width: 100%;
 margin: 0;
 }
 
-#musicPlayer_toolTip {
-margin: 0;
-}
-
 }
 /* end music player for phones */
+
+@keyframes musicPlayer_toolTip {
+  to {
+    opacity: 0.1;
+    transform: translate3d(0, -0.3rem, 0);
+  }
+}
+
+#musicPlayer_toolTip {
+display: flex;
+justify-content: center;
+margin: 0 0 -5px 0;
+}
+
+#musicPlayer_toolTip > div {
+  margin: 0 1vw;
+  animation: musicPlayer_toolTip 0.7s infinite alternate;
+}
+#musicPlayer_toolTip > div:nth-child(2) {
+  animation-delay: 0.05s;
+}
+#musicPlayer_toolTip > div:nth-child(3) {
+  animation-delay: 0.1s;
+}
+#musicPlayer_toolTip > div:nth-child(4) {
+  animation-delay: 0.15s;
+}
+#musicPlayer_toolTip > div:nth-child(5) {
+  animation-delay: 0.2s;
+}
+#musicPlayer_toolTip > div:nth-child(6) {
+  animation-delay: 0.25s;
+}
+#musicPlayer_toolTip > div:nth-child(7) {
+  animation-delay: 0.3s;
+}
+#musicPlayer_toolTip > div:nth-child(8) {
+  animation-delay: 0.35s;
+}
+
 #transition {
 margin: 0;
 padding: 5vw 0;
@@ -202,12 +232,14 @@ background-color: rgba(0,0,0,0.3);
 
 #footerContainer {
 position: absolute;
+z-index: -1;
 background-color: rgba(155, 171,198, 0.3);
 width: 100%;
 padding: 20vh 0 0 0;
 }
 
 #footer {
+z-index: -1;
 height: 66px;
 width: 100%;
 background-image: url("blue-floral-design-4.jpg");
