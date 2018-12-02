@@ -73,19 +73,5 @@
     <div id="footerContainer"><div id="footer"></div></div>
     </div>
 </body>
-<script>
-
-window.onscroll = function() {myFunction()};
-
-var header = document.getElementById("musicPlayer");
-var sticky = header.offsetTop;
-
-function myFunction() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.remove("sticky");
-  }
-}
-</script>
+<script src="script.js"></script>
 </html>
