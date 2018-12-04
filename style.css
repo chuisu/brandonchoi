@@ -109,6 +109,10 @@ height: inherit;
   animation-delay: 0.35s;
 }
 
+#musicPlayer_playpauseButton {
+
+}
+
 #transition {
 margin: 0;
 padding: 5vw 0;

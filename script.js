@@ -1,7 +1,9 @@
-window.onscroll = function() {stickyMusicBar()};
-
 var header = document.getElementById("musicPlayer");
 var sticky = header.offsetTop;
+var aud = document.getElementById("musicPlayer_audio"); 
+var playIcon = document.getElementById("");
+
+window.onscroll = function() {stickyMusicBar()};
 
 function stickyMusicBar() {
   if (window.pageYOffset > sticky) {
@@ -11,11 +13,25 @@ function stickyMusicBar() {
   }
 }
 
-//pseudocode for music bar
-//function showMusicBar() {
-//  if clicked {
-//    hide "LISTEN?";  
-//    classList.add("shownMusicBar");
-//    start playing the music;
-//    }
-//}
+function togglePlay() {
+}
+
+$("#musicPlayer").click(function() {
+  $("#musicPlayer_toolTip").hide();
+//show controls
+  aud.play();
+  $("#musicPlayer_playpauseButton").addClass("fa fa-play");
+});
+
+$("#musicPlayer_playpauseButton").click(function() {
+  if (aud.paused) {
+    aud.play();
+    $("#musicPlayer_playpauseButton").removeClass("fa fa-pause");
+    $("#musicPlayer_playpauseButton").addClass("fa fa-play");
+  }
+  else {
+    aud.pause();
+    $("#musicPlayer_playpauseButton").removeClass("fa fa-play");
+    $("#musicPlayer_playpauseButton").addClass("fa fa-pause");
+  }
+});
