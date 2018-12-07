@@ -113,6 +113,15 @@ height: inherit;
 
 }
 
+#musicPlayer_timeline {
+width: 100%;
+
+}
+
+#musicPlayer_playhead {
+
+}
+
 #transition {
 margin: 0;
 padding: 5vw 0;

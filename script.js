@@ -5,6 +5,7 @@ var playpauseButton = document.getElementById("musicPlayer_playpauseButton");
 
 window.onscroll = function() {stickyMusicBar()};
 playpauseButton.onclick = function() {togglePlay()};
+aud.ontimeupdate = function() {progressPlayhead};
 
 function stickyMusicBar() {
   if (window.pageYOffset > sticky) {
@@ -14,36 +15,31 @@ function stickyMusicBar() {
   }
 }
 
-function pauseAudio() {
-  aud.pause();
-  playpauseButton.classList.remove("fa-pause");
-  playpauseButton.classList.add("fa-play");
-}
-
 function togglePlay() {
   if (aud.paused == true) {
-    alert("trying to play");
     aud.play();
-    alert("should have played");
     playpauseButton.classList.remove("fa-play");
     playpauseButton.classList.add("fa-pause");
   } else {
-    pauseAudio();
-    alert("should have paused");
+    aud.pause();
+    playpauseButton.classList.remove("fa-pause");
+    playpauseButton.classList.add("fa-play");
   }
 }
-// the reason it keeps playing after is the below function
-// complete the conditional statement below to make it run only on the initial click
+
+function progressPlayhead() {
+
+}
+
 $("#musicPlayer").click(function() {
-  if () {
+  if ($("#musicPlayer_toolTip").is(":visible")) {
     $("#musicPlayer_toolTip").hide();
     aud.play();
     playpauseButton.classList.add("fa");
     playpauseButton.classList.add("fa-pause");
-  } else {
-  
   }
 });
+
 
 //$("#musicPlayer_playpauseButton").click(function() {
 //  if (aud.paused == true) {
