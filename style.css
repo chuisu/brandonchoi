@@ -38,13 +38,25 @@ top: 0px;
 left: -0.4vw;
 margin: 0 26vw 0 26vw;
 }
+
+.musicPlayer_timeline {
+width: 90%;
+height: 2px;
+background-color: black;
+margin: -10px auto auto auto;
+display: flex;
+align-items: center;
+}
+
+.musicPlayer_playhead {
+width: 5px;
+height: 16px;
+background-color: black;
+}
+
 }
 
 /* end music player for desktops */
-/* 
-#musicPlayer_progress to display: none while #musicPlayer_toolTip is in view.
-#musicPlayer_toolTip to display: none while #musicPlayer_progress is in view.
-*/
 
 /* music player for phones */
 
@@ -62,6 +74,21 @@ bottom: 0px;
 height: 60px;
 width: 100%;
 margin: 0;
+}
+
+.musicPlayer_timeline {
+width: 90%;
+height: 2px;
+background-color: black;
+margin: -10px auto auto auto;
+display: flex;
+align-items: center;
+}
+
+.musicPlayer_playhead {
+width: 5px;
+height: 16px;
+background-color: black;
 }
 
 }
@@ -113,14 +140,6 @@ height: inherit;
 
 }
 
-#musicPlayer_timeline {
-width: 100%;
-
-}
-
-#musicPlayer_playhead {
-
-}
 
 #transition {
 margin: 0;

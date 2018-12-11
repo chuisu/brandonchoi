@@ -3,10 +3,10 @@
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link rel='stylesheet' href='style.css'/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
       <div id="musicPlayer">
-<!--   
         <div id="musicPlayer_toolTip">
           <div>L</div>
           <div>I</div>
@@ -16,11 +16,12 @@
           <div>N</div>
           <div>?</div>
         </div>
---!>
-        <audio src="https://docs.google.com/uc?export=download&id=14wdNaJeuKDW8wYu6nivv2F-d_bBedr1s"></audio>
+        <audio src="https://docs.google.com/uc?export=download&id=14wdNaJeuKDW8wYu6nivv2F-d_bBedr1s" id="musicPlayer_audio"></audio>
         <div id="musicPlayer_playpauseButton"></div>
         <div id="musicPlayer_prevButton"></div>
-        <div id="musicPlayer_progress"></div>
+        <div id="musicPlayer_timeline">
+          <div id="musicPlayer_playhead"></div>
+        </div>
         <div id="musicPlayer_nextButton"></div>
       </div>
 </body>
