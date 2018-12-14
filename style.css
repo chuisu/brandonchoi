@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway');
-
+@import url('https://fonts.googleapis.com/css?family=Raleway|Fjalla+One|Indie+Flower');
 body#mainBody {
 background-image: url("impression.jpg");
 background-repeat: no-repeat;
@@ -147,6 +146,7 @@ padding: 5vw 0;
 background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgba(155, 171, 198, 0.3));
 }
 
+/* brief description for desktops */
 @media only screen and (min-width: 1000px) {
 p#briefDescription {
 margin: 0;
@@ -159,7 +159,9 @@ color: orange;
 text-shadow: -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #000, 0.5px 0.5px 0 #000;
 }
 }
+/* end brief description for desktops */
 
+/* brief description for phones */
 @media only screen and (max-width: 1000px) {
 p#briefDescription {
 margin: 0 30px;
@@ -171,39 +173,22 @@ letter-spacing: 0.68vw;
 color: orange;
 text-shadow: -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #000, 0.5px 0.5px 0 #000;
 }
-
 }
+/* end brief description for phones*/
 
-
-@media only screen and (min-width: 1000px) {
-#nav ul {
-margin: 0 0 0 50vw;
-padding: 1vh 0;
-background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255, 255, 255, 0.8));
-}
-#nav {
+#top {
 text-align: right;
 /*background-color: red;*/
 background-image: url("blue-floral-design-4.jpg");
 background-size: 500px 400px;
 background-repeat: repeat-x;
-}
-
-}
-
-@media only screen and (max-width: 1000px) {
-#nav ul {
-padding: 1vh 0;
-background-image: linear-gradient(0.25turn, rgba(255,0,0,0), rgba(255, 255, 255, 0.8), rgba(255,0,0,0));
+height: 40px;
 }
 
 #nav {
+background-color: orange;
 text-align: center;
-/*background-color: red;*/
-background-image: url("blue-floral-design-4.jpg");
-background-size: 500px 400px;
-background-repeat: repeat-x;
-}
+margin: -8vh -4vw 8vh;
 }
 
 #nav ul li {
@@ -213,11 +198,11 @@ margin: 0 1vw;
 }
 
 #nav ul li a, #nav ul li a:visited, #nav ul li a:hover {
-color: orange;
-font-family: Raleway;
+color: black;
+font-family: 'Raleway', sans-serif;
 font-size: 16pt;
 letter-spacing: 4px;
-text-shadow: -1.5px -1.5px 0 #fef, 1.5px -1.5px 0 #fef, -1.5px 1.5px 0 #fef, 1.5px 1.5px 0 #fef;
+/* text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
 }
 
 #mainTitle {
@@ -230,7 +215,7 @@ color: white;
 }
 
 section.primaryContent {
-margin: 0 0 5vh 0;
+margin: 10vh 0 5vh 0;
 }
 
 h3.primaryContent {
