@@ -4,14 +4,13 @@ var aud = document.getElementById("musicPlayer_audio");
 var playpauseButton = document.getElementById("musicPlayer_playpauseButton");
 var timeline = document.getElementById("musicPlayer_timeline");
 var playhead = document.getElementById("musicPlayer_playhead");
+var timelineWidth = timeline.offsetWidth - playhead.offsetWidth;
 
 window.onscroll = function() {stickyMusicBar()};
 playpauseButton.onclick = function() {togglePlay()};
 aud.ontimeupdate = function() {progressPlayhead()};
-timeline.onclick = function() {}; // get the x coordinate and move the playhead there
-playhead.onclick = function() {}; // maybe we don't need this? see below
-playhead.onmousedown = function (){}; // start updating where the playhead is based on the mouse's x coordinates
-playhead.onmouseup = function() {}; // release the playhead on the last known x coordinate and update the track's position
+playhead.addEventListener('mousedown', mouseDown, false);
+window.addEventListener('mouseup', mouseUp, false);
 
 function stickyMusicBar() {
   if (window.pageYOffset > sticky) {
@@ -37,11 +36,15 @@ function progressPlayhead() {
   var playPercent = 100 * (aud.currentTime / aud.duration);
   playhead.style.marginLeft = playPercent + "%";
 //  console.log("we tried to move the playhead to " + playPercent + "%");
+//if (aud finished) {
+//pause
+//reset playhead
 }
 
 $("#musicPlayer").click(function() {
   if ($("#musicPlayer_toolTip").is(":visible")) {
     $("#musicPlayer_toolTip").hide();
+//  buffer audio first
     aud.play();
     playpauseButton.classList.add("fa");
     playpauseButton.classList.add("fa-pause");
@@ -50,18 +53,58 @@ $("#musicPlayer").click(function() {
   }
 });
 
+//Makes timeline clickable
+timeline.addEventListener("click", function (event) {
+	moveplayhead(event);
+	aud.currentTime = aud.duration * clickPercent(event);
+}, false);
 
-//$("#musicPlayer_playpauseButton").click(function() {
-//  if (aud.paused == true) {
-//    alert("we clicked the button! Trying to play...");
-//    aud.play();
-//    $("#musicPlayer_playpauseButton").removeClass("fa fa-play");
-//    $("#musicPlayer_playpauseButton").addClass("fa fa-pause");
-//  } else if (aud.paused == false) {
-//    alert("we clicked the button! Trying to pause...");
-//    aud.pause();
-//    alert("it should have paused");
-//    $("#musicPlayer_playpauseButton").removeClass("fa fa-pause");
-//    $("#musicPlayer_playpauseButton").addClass("fa fa-play");
-//  }
-//});
+// returns click as decimal (.77) of the total timelineWidth
+function clickPercent(event) {
+    return (event.clientX - getPosition(timeline)) / (timeline.offsetWidth - playhead.offsetWidth);
+}
+
+function moveplayhead(event) {
+    var newMargLeft = event.clientX - getPosition(timeline);
+
+	if (newMargLeft >= 0 && newMargLeft <= (timeline.offsetWidth - playhead.offsetWidth)) {
+		playhead.style.marginLeft = newMargLeft + "px";
+	}
+	if (newMargLeft < 0) {
+		playhead.style.marginLeft = "0px";
+	}
+	if (newMargLeft > (timeline.offsetWidth - playhead.offsetWidth)) {
+		playhead.style.marginLeft = (timeline.offsetWidth - playhead.offsetWidth) + "px";
+	}
+}
+
+// getPosition
+// Returns elements left position relative to top-left of viewport
+function getPosition(el) {
+    return el.getBoundingClientRect().left;
+}
+
+var onplayhead = false;
+var wasPlaying = false;
+function mouseDown() {
+  onplayhead = true;
+  window.addEventListener('mousemove', moveplayhead, true);
+  if (!aud.paused) {
+    aud.pause();
+    wasPlaying = true;
+  }
+}
+
+function mouseUp(event) {
+  if (onplayhead == true) {
+      moveplayhead(event);
+      window.removeEventListener('mousemove', moveplayhead, true);
+      // change current time
+      aud.currentTime = aud.duration * clickPercent(event);
+      if (wasPlaying == true) {
+        aud.play()
+      }
+    }
+    onplayhead = false;
+    wasPlaying = false;
+}
