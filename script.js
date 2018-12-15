@@ -1,5 +1,7 @@
-var header = document.getElementById("musicPlayer");
-var sticky = header.offsetTop;
+var header1 = document.getElementById("musicPlayer");
+var header2 = document.getElementById("musicPlayerBackground");
+var sticky1 = header1.offsetTop;
+var sticky2 = header2.offsetTop;
 var aud = document.getElementById("musicPlayer_audio"); 
 var playpauseButton = document.getElementById("musicPlayer_playpauseButton");
 var timeline = document.getElementById("musicPlayer_timeline");
@@ -13,10 +15,12 @@ playhead.addEventListener('mousedown', mouseDown, false);
 window.addEventListener('mouseup', mouseUp, false);
 
 function stickyMusicBar() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
+  if (window.pageYOffset > sticky1) {
+    header1.classList.add("sticky");
+    header2.classList.add("sticky");
   } else {
-    header.classList.remove("sticky");
+    header1.classList.remove("sticky");
+    header2.classList.remove("sticky");
   }
 }
 

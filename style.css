@@ -5,6 +5,12 @@ background-image: url("impression.jpg");
 background-repeat: no-repeat;
 }
 
+@media only screen and (max-width: 1000px) {
+body#mainBody {
+background-position: center;
+}
+}
+
 body#secondaryBody {
 }
 
@@ -24,35 +30,18 @@ min-height: 95vh;
 /* music player for desktops */
 @media only screen and (min-width: 1000px) {
 
-#musicPlayer {
-background-color: orange;
-height: 20px;
+#musicPlayerBackground {
 margin: 0 auto;
-padding: 0 4vw;
-width: 40vw;
+width: 48vw;
 }
 
-#musicPlayer.sticky {
+#musicPlayerBackground.sticky {
 position: fixed;
 top: 0px;
 left: -0.4vw;
 margin: 0 25vw 0 26.2vw;
 }
 
-.musicPlayer_timeline {
-width: 90%;
-height: 2px;
-background-color: black;
-margin: -10px auto auto auto;
-display: flex;
-align-items: center;
-}
-
-.musicPlayer_playhead {
-width: 5px;
-height: 16px;
-background-color: black;
-}
 }
 
 /* end music player for desktops */
@@ -60,26 +49,40 @@ background-color: black;
 /* music player for phones */
 
 @media only screen and (max-width: 1000px) {
-#musicPlayer {
-background-color: orange;
-height: 20px;
+#musicPlayerBackground {
 margin: 30px;
-padding: 0 4vw;
 }
 
-#musicPlayer.sticky {
+#musicPlayer.sticky, #musicPlayerBackground.sticky {
 position: fixed;
-bottom: 0px;
+top: 0px;
 height: 60px;
 width: 100%;
 margin: 0;
 }
 
+}
+/* end music player for phones */
+#musicPlayer {
+background-color: rgba(255,255,255,0.7);
+height: 30px;
+text-align: center;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+#musicPlayerBackground {
+background-image: url("blue-floral-design-4.jpg");
+background-size: 500px 400px;
+background-repeat: repeat-x;
+height: 30px;
+}
+
 .musicPlayer_timeline {
 width: 90%;
 height: 2px;
-background-color: black;
-margin: -10px auto auto auto;
+background-color: orange;
 display: flex;
 align-items: center;
 }
@@ -87,11 +90,8 @@ align-items: center;
 .musicPlayer_playhead {
 width: 5px;
 height: 16px;
-background-color: black;
+background-color: orange;
 }
-
-}
-/* end music player for phones */
 
 @keyframes musicPlayer_toolTip {
   to {
@@ -110,6 +110,9 @@ height: inherit;
 }
 
 #musicPlayer_toolTip > div {
+  color: orange;
+  font-size: 20px;
+  font-family: 'Raleway';
   margin: 8px 12px;
   animation: musicPlayer_toolTip 0.7s infinite alternate;
 }
@@ -136,22 +139,23 @@ height: inherit;
 }
 
 #musicPlayer_playpauseButton {
-
+color: orange;
+margin: 0 16px 0 0;
 }
-
 
 #transition {
 margin: 0;
-padding: 5vw 0;
+padding: 5vh 0;
 background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgba(155, 171, 198, 0.3));
 }
 
 /* brief description for desktops */
 @media only screen and (min-width: 1000px) {
 p#briefDescription {
-margin: 0 auto;
-margin-left: 16px;
+position: absolute;
+top: 60px;
 font-family: Raleway;
+width: 100%;
 text-align: center;
 letter-spacing: 0.66vw;
 font-weight: bold;
@@ -164,7 +168,7 @@ text-shadow: -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #000, 0.5
 
 /* brief description for phones */
 @media only screen and (max-width: 1000px) {
-p#briefDescription {
+/* p#briefDescription {
 margin: 0 30px;
 font-family: Raleway;
 text-align: left;
@@ -173,6 +177,9 @@ font-size: 12pt;
 letter-spacing: 0.68vw;
 color: orange;
 text-shadow: -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #000, 0.5px 0.5px 0 #000;
+} */
+p#briefDescription {
+display: none;
 }
 }
 /* end brief description for phones*/
