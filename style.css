@@ -5,13 +5,22 @@ background-image: url("impression.jpg");
 background-repeat: no-repeat;
 }
 
+body#secondaryBody {
+background-image: url("secondaryImpression.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+}
+
 @media only screen and (max-width: 1000px) {
 body#mainBody {
 background-position: center;
 }
 }
 
+@media only screen and (max-width: 1000px) {
 body#secondaryBody {
+background-position: center;
+}
 }
 
 a, a:visited, a:hover {
@@ -193,6 +202,15 @@ background-repeat: repeat-x;
 height: 40px;
 }
 
+#secondaryTop {
+text-align: right;
+/*background-color: red;*/
+background-image: url("green-floral-design.jpg");
+background-size: 500px 400px;
+background-repeat: repeat-x;
+height: 40px;
+}
+
 #nav {
 background-color: black;
 text-align: center;
@@ -203,18 +221,29 @@ div#nav ul {
 padding: 0 0 0 0;
 }
 
-#nav ul li {
+#nav ul li, #secondaryNav ul li{
 list-style-type: none;
 display: inline;
 margin: 0 1vw;
 }
 
-#nav ul li a, #nav ul li a:visited, #nav ul li a:hover {
+#nav ul li a, #secondaryNav ul li a, #nav ul li a:visited, #secondaryNav ul li a:visited, #nav ul li a:hover, #secondaryNav ul li a:hover {
 color: white;
 font-family: 'Raleway', sans-serif;
 font-size: 16pt;
 letter-spacing: 4px;
 /* text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
+}
+
+#secondaryNav {
+background-color: black;
+text-align: center;
+margin: 0;
+}
+
+div#secondaryNav ul {
+padding: 0;
+margin: 0;
 }
 
 /* mainTitle for desktops */
@@ -293,8 +322,8 @@ background-size: 500px 400px;
 
 #footerSecondary {
 height: 66px;
-margin: 0 -2vw -2vh -2vw;
-background-image: url("blue-floral-design-4.jpg");
+width: 100%;
+background-image: url("green-floral-design.jpg");
 background-repeat: repeat-x;
 background-size: 500px 400px;
 }
