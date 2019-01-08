@@ -221,7 +221,7 @@ div#nav ul {
 padding: 0 0 0 0;
 }
 
-#nav ul li, #secondaryNav ul li{
+#nav ul li, #secondaryNav ul li, #socialIcons ul li{
 list-style-type: none;
 display: inline;
 margin: 0 1vw;
@@ -301,6 +301,27 @@ width: 40vw;
 padding: 4vh 4vw; 
 background-color: rgba(0,0,0,0.3);
 }
+}
+
+#social {
+height: 25px;
+width: 40vw;
+padding: 8px 4vw 0;
+margin: 0 auto;
+background: white;
+color: black;
+font-family: 'Raleway';
+font-weight: 800;
+letter-spacing: 1em;
+}
+
+#socialIcons {
+float: right;
+display: inline;
+}
+
+#socialIcons ul {
+margin: 0;
 }
 
 #footerContainer {
