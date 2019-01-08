@@ -11,6 +11,12 @@ background-repeat: no-repeat;
 background-size: cover;
 }
 
+body#docsBody {
+background-image: url("docs.png");
+background-repeat: no-repeat;
+background-size: cover;
+}
+
 @media only screen and (max-width: 1000px) {
 body#mainBody {
 background-position: center;
@@ -240,6 +246,15 @@ background-repeat: repeat-x;
 height: 40px;
 }
 
+#docsTop {
+text-align: right;
+/*background-color: red;*/
+background-image: url("docs-floral-design.jpg");
+background-size: 500px 400px;
+background-repeat: repeat-x;
+height: 40px;
+}
+
 /* nav and social for desktops */
 @media only screen and (min-width: 1000px) {
 #nav {
@@ -345,9 +360,21 @@ font-family: Raleway;
 color: white;
 }
 
+.tertiaryContent {
+line-height: 2em;
+font-family: Raleway;
+color: black;
+
+}
+
 #contentContainer {
 margin: 0;
 background-color: rgba(155, 171, 198, 0.3);
+}
+
+#secondaryContentContainer {
+margin: 0;
+padding: 30vh 0;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -367,6 +394,22 @@ background-color: rgba(0,0,0,0.3);
 }
 }
 
+@media only screen and (max-width: 1000px) {
+#secondaryMain {
+margin: 0 30px;
+padding: 4vh 4vw; 
+background-color: rgba(0,0,0,0.3);
+}
+}
+
+@media only screen and (min-width: 1000px) {
+#secondaryMain {
+margin: 0 auto;
+width: 40vw;
+padding: 4vh 4vw; 
+background-color: rgba(0,0,0,0.3);
+}
+}
 
 #socialIcons {
 }
@@ -395,6 +438,14 @@ background-size: 500px 400px;
 height: 66px;
 width: 100%;
 background-image: url("green-floral-design.jpg");
+background-repeat: repeat-x;
+background-size: 500px 400px;
+}
+
+#footerDocs {
+height: 66px;
+width: 100%;
+background-image: url("docs-floral-design.jpg");
 background-repeat: repeat-x;
 background-size: 500px 400px;
 }
