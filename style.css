@@ -214,9 +214,9 @@ height: 40px;
 #nav {
 width: 48vw;
 background-color: black;
-text-align: center;
+text-align: left;
 display: flex;
-justify-content: center;
+justify-content: flex-start;
 margin: 0 auto;
 }
 
@@ -242,9 +242,9 @@ letter-spacing: 4px;
 width: 48vw;
 margin: 0 auto;
 background: white;
-text-align: center;
+text-align: right;
 display: flex;
-justify-content: center;
+justify-content: flex-end;
 }
 
 #secondaryNav {
