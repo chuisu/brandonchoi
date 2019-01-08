@@ -3,6 +3,7 @@
 body#mainBody {
 background-image: url("impression.jpg");
 background-repeat: no-repeat;
+background-size: cover;
 }
 
 body#secondaryBody {
@@ -418,12 +419,13 @@ background-color: rgba(0,0,0,0.3);
 }
 
 #footerContainer {
-position: absolute;
 z-index: -1;
 background-color: rgba(155, 171,198, 0.3);
 width: 100%;
 padding: 20vh 0 0 0;
+margin: 0 0 -10px 0;
 }
+
 
 #footer {
 z-index: -1;
