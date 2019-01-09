@@ -95,7 +95,7 @@ background-repeat: repeat-x;
 .musicPlayer_timeline {
 width: 90%;
 height: 2px;
-background-color: #f48f42;
+background-color: #ff631c;
 display: flex;
 align-items: center;
 }
@@ -103,7 +103,7 @@ align-items: center;
 .musicPlayer_playhead {
 width: 5px;
 height: 16px;
-background-color: #f48f42;
+background-color: #ff631c;
 }
 
 @keyframes musicPlayer_toolTip {
@@ -123,7 +123,7 @@ height: inherit;
 }
 
 #musicPlayer_toolTip > div {
-  color: #f48f42;
+  color: #ff631c;
   font-size: 20px;
   font-family: 'Raleway';
   margin: 8px 12px;
@@ -152,7 +152,7 @@ height: inherit;
 }
 
 #musicPlayer_playpauseButton {
-color: #f48f42;
+color: #ff631c;
 margin: 0 16px 0 0;
 }
 
@@ -184,7 +184,7 @@ font-family: Raleway;
 letter-spacing: 0.66vw;
 font-weight: bold;
 font-size: 0.82vw;
-color: #f48f42;
+color: #ff8300;
 text-shadow: -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #000, 0.5px 0.5px 0 #000;
 }
 
@@ -210,7 +210,7 @@ font-family: Raleway;
 font-weight: bold;
 font-size: 2vw;
 letter-spacing: 0.68vw;
-color: #f48f42;
+color: #ff8300;
 text-shadow: -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #000, 0.5px 0.5px 0 #000;
 }
 

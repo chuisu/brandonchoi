@@ -112,3 +112,4 @@ function mouseUp(event) {
     onplayhead = false;
     wasPlaying = false;
 }
+
