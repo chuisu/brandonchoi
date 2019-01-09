@@ -1,8 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway|Fjalla+One|Indie+Flower');
 
+/* 
+html {
+background-image: url("blue-floral-design-4.jpg");
+background-size: 500px 400px;
+background-repeat: ;
+}
+*/
+
 body#mainBody {
 background-image: url("impression.jpg");
 background-repeat: no-repeat;
+background-color: black;
 }
 
 body#secondaryBody {
