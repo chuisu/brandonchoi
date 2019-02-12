@@ -283,6 +283,10 @@ text-align: right;
 display: flex;
 justify-content: flex-end;
 }
+
+#socialIcons {
+margin-right: 1vw;
+}
 }
 
 /* nav and social for phones */
@@ -301,6 +305,10 @@ background: white;
 text-align: right;
 display: flex;
 justify-content: flex-end;
+}
+
+#socialIcons {
+margin-right: 1vw;
 }
 }
 
@@ -367,6 +375,14 @@ letter-spacing: 1em;
 line-height: 2em;
 font-family: Raleway;
 color: white;
+}
+
+ul.secondaryContent {
+list-style-type: none;
+}
+
+li a, li a:visited, li a:hover {
+color: orange;
 }
 
 .tertiaryContent {
