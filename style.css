@@ -354,7 +354,7 @@ margin: 20vh 35vw 0 35vw;
 /* mainTitle for phones */
 @media only screen and (max-width: 1000px) {
 #mainTitle {
-margin: 0 0 0;
+margin: 5vh 0 0;
 }
 }
 /* end mainTitle for phones */
