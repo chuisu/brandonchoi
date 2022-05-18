@@ -280,7 +280,7 @@ height: 40px;
 #nav {
 width: 48vw;
 background-color: black;
-text-align: left;
+text-align: center;
 display: flex;
 justify-content: flex-start;
 margin: 0 auto;
@@ -298,13 +298,18 @@ justify-content: flex-end;
 #socialIcons {
 margin-right: 1vw;
 }
+
+#nav ul li a {
+font-size: 20px;
+}
+
 }
 
 /* nav and social for phones */
 @media only screen and (max-width: 1000px) {
 #nav {
 background-color: black;
-text-align: left;
+text-align: center;
 display: flex;
 justify-content: space-around;
 margin: 0 30px;
@@ -321,6 +326,10 @@ justify-content: flex-end;
 #socialIcons {
 margin-right: 1vw;
 }
+
+#nav ul li a {
+font-size: 4vw;
+}
 }
 
 div#nav ul {
@@ -336,11 +345,9 @@ margin: 0 1vw;
 #nav ul li a, #secondaryNav ul li a, #nav ul li a:visited, #secondaryNav ul li a:visited, #nav ul li a:hover, #secondaryNav ul li a:hover {
 color: white;
 font-family: 'Raleway', sans-serif;
-font-size: 4vw;
 letter-spacing: 4px;
 /* text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
 }
-
 
 #secondaryNav {
 background-color: black;
