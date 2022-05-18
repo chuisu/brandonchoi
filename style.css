@@ -335,7 +335,7 @@ margin: 0 1vw;
 #nav ul li a, #secondaryNav ul li a, #nav ul li a:visited, #secondaryNav ul li a:visited, #nav ul li a:hover, #secondaryNav ul li a:hover {
 color: white;
 font-family: 'Raleway', sans-serif;
-font-size: 16pt;
+font-size: 4vw;
 letter-spacing: 4px;
 /* text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
 }
