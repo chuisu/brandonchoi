@@ -84,7 +84,7 @@ margin: 0 30px;
 #musicPlayer.sticky, #musicPlayerBackground.sticky {
 position: fixed;
 top: 0px;
-height: 60px;
+height: 6vh;
 width: 100%;
 margin: 0;
 }
