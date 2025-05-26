@@ -79,6 +79,7 @@ margin: 0 25vw 0 26.2vw;
 @media only screen and (max-width: 1000px) {
 #musicPlayerBackground {
 margin: 0 30px;
+padding: 0 20px;
 }
 
 #musicPlayer.sticky, #musicPlayerBackground.sticky {
