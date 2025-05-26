@@ -11,8 +11,8 @@ background-repeat: ;
 body#mainBody {
 background-image: url("impression.jpg");
 background-repeat: no-repeat;
-background-color: black;
-background-position: left;
+background-color: #bdc7d1;
+background-position: top;
 margin: 0;
 }
 
@@ -31,10 +31,11 @@ background-size: cover;
 
 @media only screen and (max-width: 1000px) {
 body#mainBody {
+background-color: #2a2021;
 background-image: url("impression_mobile.jpg");
 background-position: top;
-background-size: 150%;
-background-position-y: -15vh;
+background-size: 200%;
+/* background-position-y: -15vh; */
 }
 }
 
@@ -66,8 +67,8 @@ width: 48vw;
 #musicPlayerBackground.sticky {
 position: fixed;
 top: 0px;
-left: -0.4vw;
-margin: 0 25vw 0 26.2vw;
+/* left: -0.4vw; */
+margin: 0 25vw 0 26.4vw;
 }
 
 }
@@ -79,26 +80,30 @@ margin: 0 25vw 0 26.2vw;
 @media only screen and (max-width: 1000px) {
 #musicPlayerBackground {
 margin: 0 30px;
-padding: 0 20px;
 }
 
-#musicPlayer.sticky, #musicPlayerBackground.sticky {
+#musicPlayerBackground.sticky {
 position: fixed;
 top: 0px;
-height: 6vh;
+height: 6.9vh;
 width: 100%;
 margin: 0;
 }
 
+#musicPlayer.sticky {
+padding: 0;
 }
+}
+
 /* end music player for phones */
 #musicPlayer {
 background-color: rgba(255,255,255,0.7);
-height: 30px;
+height: 6.9vh;
 text-align: center;
 display: flex;
 align-items: center;
 justify-content: center;
+padding-top: 1vh;
 }
 
 #musicPlayerBackground {
@@ -139,7 +144,7 @@ height: inherit;
 
 #musicPlayer_toolTip > div {
   color: #ff631c;
-  font-size: 20px;
+  font-size: 36px;
   font-family: 'Raleway';
   margin: 8px 12px;
   animation: musicPlayer_toolTip 0.7s infinite alternate;
@@ -171,6 +176,12 @@ color: #ff631c;
 margin: 0 16px 0 0;
 }
 
+#transition {
+opacity: 0; /* Initially hidden */
+transform: translateY(10vh); /* Start from below */
+transition: opacity 0.669s, transform 0.669s;
+}
+
 @media only screen and (min-width: 1000px) {
 #transition {
 margin: 0;
@@ -181,7 +192,8 @@ background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgba(155, 171, 198
 
 @media only screen and (max-width: 1000px) {
 #transition {
-margin: 20vh 0 -8px 0;
+/* margin: 20vh 0 -8px 0; */
+height: 24vh;
 padding: 0 0;
 background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgba(155, 171, 198, 0.3));
 }
@@ -361,6 +373,12 @@ padding: 0;
 margin: 0;
 }
 
+#mainTitle {
+opacity: 0; /* Initially hidden */
+transform: translateY(30px); /* Slight lift */
+transition: opacity 0.669s, transform 0.669s;
+}
+
 /* mainTitle for desktops */
 @media only screen and (min-width: 1000px) {
 #mainTitle {
@@ -414,6 +432,9 @@ color: black;
 #contentContainer {
 margin: 0;
 background-color: rgba(155, 171, 198, 0.3);
+opacity: 0; /* Initially hidden */
+margin-top: 10vh; /* Start from below */
+transition: opacity 0.669s, transform 0.669s;
 }
 
 #secondaryContentContainer {

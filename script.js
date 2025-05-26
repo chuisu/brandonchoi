@@ -113,3 +113,11 @@ function mouseUp(event) {
     wasPlaying = false;
 }
 
+$(document).ready(function() {
+	$('#mainTitle').fadeTo(669, 1).css('transform', 'translateY(0)');
+	setTimeout(function() {
+		$('#contentContainer').fadeTo(669, 1).css('margin-top', '0');
+		$('#transition').fadeTo(669, 1).css('transform', 'translateY(0)');
+	}, 669);
+});
+
