@@ -21,70 +21,112 @@
 	<h3 class="primaryContent" id="name" style="display: inline;">bran choi</h3>
 	<p class="secondaryContent" style="display: inline;">is a believer in human beings. A believer in the creative soul and capacity for motion that humanity has throughout its short tenure on this earth proven. Inspired by black music, American folk music, and traditional Korean music, <strong id="name">bran</strong>'s music underpins this creative spirit, and is written and performed with the awareness of what it is to be a human being on the planet right-fucking-now. Thanks for reading this, fellow suffering being. Here we are.</p>
 
-<p class="secondaryContent"><strong id="name">bran</strong> has performed at the Jazz Gallery, Birdland, Dizzy's Club Coca Cola, among many other various and illustrious venues in NYC, averaging ~50 heads in rooms like Threes Brewing (Gowanus) and the Jazz Gallery (NoMad), and ~250 heads in rooms like the Red Pavilion (Bushwick).</p>
+	<p class="secondaryContent"><strong id="name">bran</strong> has performed at the Jazz Gallery, Birdland, Dizzy's Club Coca Cola, among many other various and illustrious venues in NYC, averaging ~50 heads in rooms like Threes Brewing (Gowanus) and the Jazz Gallery (NoMad), and ~100 heads in rooms like the Red Pavilion (Bushwick). <strong id="name">bran</strong> has performed for crowds of ~2500 at places like the Granada Theater in Santa Barbara, CA, and a crowd of ~400 at the Brooklyn Steel.</p>
 
-	<div id="musicPlayerBackgroundEpk"><div class="musicPlayerEpk">
-        <div id="musicPlayer_toolTip">
-          <div>L</div>
-          <div>I</div>
-          <div>S</div>
-          <div>T</div>
-          <div>E</div>
-          <div>N</div>
-          <div>?</div>
-        </div>
-        <audio src="101526_lil-melonae_excerpt-1.mp3" id="musicPlayer_audio"></audio>
-        <div id="musicPlayer_playpauseButton"></div>
-        <div id="musicPlayer_prevButton"></div>
-        <div id="musicPlayer_timeline">
-          <div id="musicPlayer_playhead"></div>
-        </div>
-        <div id="musicPlayer_nextButton"></div>
-	</div></div>
+	<!-- EPK Music Player Component -->
+	<h3 class="secondaryContent">Chordless Trio Sample</h3>
+<div class="epk-player-container">
+  <audio class="epk-audio-source" src="101526_lil-melonae_excerpt-1.mp3" preload="metadata"></audio>
+  <div class="epk-player-interface">
+    <!-- Play/Pause Button Controls -->
+    <button class="epk-control-btn play-state" aria-label="Play Track">
+      <svg class="epk-icon icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      <svg class="epk-icon icon-pause" viewBox="0 0 24 24" style="display:none;"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+    </button>
+    <!-- Timeline Track & Scrubber -->
+    <div class="epk-timeline-track">
+      <div class="epk-progress-bar"></div>
+      <div class="epk-scrubber-handle"></div>
+    </div>
+  </div>
+</div>
+	<h3 class="secondaryContent">Duo Sample</h3>
+<div class="epk-player-container">
+  <audio class="epk-audio-source" src="101726_kass.mp3" preload="metadata"></audio>
+  <div class="epk-player-interface">
+    <!-- Play/Pause Button Controls -->
+    <button class="epk-control-btn play-state" aria-label="Play Track">
+      <svg class="epk-icon icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      <svg class="epk-icon icon-pause" viewBox="0 0 24 24" style="display:none;"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+    </button>
+    <!-- Timeline Track & Scrubber -->
+    <div class="epk-timeline-track">
+      <div class="epk-progress-bar"></div>
+      <div class="epk-scrubber-handle"></div>
+    </div>
+  </div>
+</div>
+<!-- <div class="epk-player-container">
+  <audio class="epk-audio-source" src="101526_lil-melonae_excerpt-1.mp3" preload="metadata"></audio>
+  <div class="epk-player-interface">
+    <button class="epk-control-btn play-state" aria-label="Play Track">
+      <svg class="epk-icon icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      <svg class="epk-icon icon-pause" viewBox="0 0 24 24" style="display:none;"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+    </button>
+    <div class="epk-timeline-track">
+      <div class="epk-progress-bar"></div>
+      <div class="epk-scrubber-handle"></div>
+    </div>
+  </div>
+</div> -->
 
-	<div id="musicPlayerBackgroundEpk"><div id="musicPlayerEpk">
-        <div id="musicPlayer_toolTip">
-          <div>L</div>
-          <div>I</div>
-          <div>S</div>
-          <div>T</div>
-          <div>E</div>
-          <div>N</div>
-          <div>?</div>
-        </div>
-        <audio src="101726_kass.mp3" id="musicPlayer_audio"></audio>
-        <div id="musicPlayer_playpauseButton"></div>
-        <div id="musicPlayer_prevButton"></div>
-        <div id="musicPlayer_timeline">
-          <div id="musicPlayer_playhead"></div>
-        </div>
-        <div id="musicPlayer_nextButton"></div>
-	</div></div>
+<h3 class="secondaryContent">Live Performances</h3>
 
       <iframe src="https://www.youtube.com/embed/flQ0HoJuuhs?si=tB_T6p5F6c0-9Yw-&amp;start=130" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       <iframe src="https://www.youtube.com/embed/JJcS66Y-D8Q?si=pT0x2G35_UtCc43b&amp;start=141" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       <iframe src="https://www.youtube.com/embed/n06LI-l6IQk?si=WsE82tUWK5pF1PHz&amp;start=141" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<!-- EPK High-Res Press Photos Section -->
+<div id="epkPhotos" class="photo-matrix-grid">
+  
+  <!-- Photo Item 1 (Horizontal Live Shot) -->
+  <div class="photo-matrix-card">
+    <div class="photo-preview-wrapper">
+      <img src="impression.jpg" alt="Brandon Choi - Live Trumpet Performance NYC" loading="lazy">
+    </div>
+    <a href="images/brandon-choi-live-horizontal-highres.jpg" download class="photo-download-action-btn">
+      Download High-Res (Landscape)
+    </a>
+  </div>
+
+  <!-- Photo Item 2 (Vertical Press Portrait) -->
+  <div class="photo-matrix-card">
+    <div class="photo-preview-wrapper">
+      <img src="images/brandon-choi-portrait-vertical-thumb.jpg" alt="Brandon Choi - Press Portrait" loading="lazy">
+    </div>
+    <a href="images/brandon-choi-portrait-vertical-highres.jpg" download class="photo-download-action-btn">
+      Download High-Res (Portrait)
+    </a>
+  </div>
+
+  <!-- Photo Item 3 (Ensemble / Trio Shot) -->
+  <div class="photo-matrix-card">
+    <div class="photo-preview-wrapper">
+      <img src="images/brandon-choi-trio-thumb.jpg" alt="Brandon Choi Chordless Trio" loading="lazy">
+    </div>
+    <a href="images/images/brandon-choi-trio-highres.jpg" download class="photo-download-action-btn">
+      Download High-Res (Trio)
+    </a>
+  </div>
+
+</div>
+
       <h3 class="secondaryContent" style="padding-top: 10vh; display: flex; justify-content: center;">CONTACT</h3>
-      <ul class="secondaryContent" id="name" style="font-weight: bold; font-size: 20px;">
+      <ul class="secondaryContent" id="name" style="font-weight: bold; font-size: 20px; margin: 0; padding: 4vh;">
 	      <li style="padding: 0; display: flex; justify-content: center;">1 (805) 551-7875</li>
 	      <a href="mailto: me@brandonchoi.com"><li style="padding: 0; display: flex; justify-content: center;">me@brandonchoi.com</li></a></ul>
       </div>
-      <div id="social">
-        <div id="socialIcons" style="margin-right: 3vw">
-        <ul>
-          <li><a href="https://www.instagram.com/choimpet"><img src="logo_ig.png" height="16" width="16"></a></li>
-          <li><a href="https://www.youtube.com/channel/UCRXlVMQ6DW7GA-qB46HrtnA?"><img src="logo_youtube.png" height="16" width="16"></a></li>
-          <li><a href="https://www.facebook.com/branchoimusic"><img src="logo_fb.png" height="16" width="16"></a></li>
-          <li><a href="https://twitter.com/choimpet"><img src="logo_twitter.png" height="16" width="16"></a></li>
-        </ul>
-       </div>
+
+	      <div id="social">
+        <div id="socialIcons" style="margin-right: 3vw"> <ul> <li><a href="https://www.instagram.com/choimpet"><img src="logo_ig.png" height="16" width="16"></a></li>
+             <li><a href="https://www.youtube.com/channel/UCRXlVMQ6DW7GA-qB46HrtnA?"><img src="logo_youtube.png" height="16" width="16"></a></li>
+             <li><a href="https://www.facebook.com/branchoimusic"><img src="logo_fb.png" height="16" width="16"></a></li>
+             <li><a href="https://twitter.com/choimpet"><img src="logo_twitter.png" height="16" width="16"></a></li> </ul> </div>
       </div>
+    </div>
     </div>
     </div>
     <div id="footerSecondary"></div>
 </body>
-<script src="script.js">
-</script>
-</html>
-</body>
+<script src="scriptEpk.js"></script>
 </html>

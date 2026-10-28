@@ -85,7 +85,7 @@ width: 48vw;
 }
 
 #musicPlayerBackgroundEpk {
-margin: 0 auto;
+margin: 3.3vh auto;
 }
 #musicPlayerBackground.sticky {
 position: fixed;
@@ -107,13 +107,13 @@ margin: 0 25vw 0 26.4vw;
 margin: 0 30px;
 }
 #musicPlayerBackgroundEpk {
-margin: 0 30px;}
-
+margin: 10px 30px;
+}
 #musicPlayer {
 padding: 0 6.9vw;
 }
 
-#musicPlayerEpk {
+.musicPlayerEpk {
 padding: 0 6.9vw;
 }
 
@@ -141,7 +141,7 @@ align-items: center;
 justify-content: center;
 padding-top: 1vh;
 }
-#musicPlayerEpk {
+.musicPlayerEpk {
 background-color: rgba(255,255,255,0.7);
 height: 6.9vh;
 text-align: center;
@@ -224,6 +224,87 @@ height: inherit;
 #musicPlayer_playpauseButton {
 color: #ff631c;
 margin: 0 16px 0 0;
+}
+
+/* Minimal, High-Performance EPK Audio Player */
+.epk-player-container {
+  font-family: 'Raleway', sans-serif;
+  background-color: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(155, 171, 198, 0.4);
+  backdrop-filter: blur(4px);
+  padding: 12px 20px;
+  margin: 15px auto;
+  max-width: 600px;
+  border-radius: 4px;
+}
+
+.epk-player-interface {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  height: 40px;
+}
+
+/* Button & Brand Control Vectors */
+.epk-control-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.epk-icon {
+  fill: #ff631c; /* Matches your brand orange */
+  width: 100%;
+  height: 100%;
+  transition: transform 0.1s ease;
+}
+
+.epk-control-btn:hover .epk-icon {
+  transform: scale(1.1);
+}
+
+/* Timeline & Scrubber Layout */
+.epk-timeline-track {
+  position: relative;
+  flex-grow: 1;
+  height: 6px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.epk-progress-bar {
+  height: 100%;
+  width: 0%;
+  background-color: #ff631c;
+  border-radius: 3px 0 0 3px;
+  pointer-events: none;
+}
+
+.epk-scrubber-handle {
+  position: absolute;
+  left: 0%;
+  width: 14px;
+  height: 14px;
+  background-color: #ff631c;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+  pointer-events: none;
+  transition: transform 0.1s ease;
+}
+
+.epk-timeline-track:hover .epk-scrubber-handle {
+  transform: translateX(-50%) scale(1.2);
 }
 
 iframe {
@@ -579,3 +660,6 @@ background-image: url("docs-floral-design.jpg");
 background-repeat: repeat-x;
 background-size: 500px 400px;
 }
+
+#epkPhotos {
+display: flex;}

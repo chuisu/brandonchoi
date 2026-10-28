@@ -85,7 +85,7 @@ width: 48vw;
 }
 
 #musicPlayerBackgroundEpk {
-margin: 0 auto;
+margin: 3.3vh auto;
 }
 #musicPlayerBackground.sticky {
 position: fixed;
@@ -107,8 +107,8 @@ margin: 0 25vw 0 26.4vw;
 margin: 0 30px;
 }
 #musicPlayerBackgroundEpk {
-margin: 0 30px;}
-
+margin: 10px 30px;
+}
 #musicPlayer {
 padding: 0 6.9vw;
 }
@@ -224,6 +224,87 @@ height: inherit;
 #musicPlayer_playpauseButton {
 color: #ff631c;
 margin: 0 16px 0 0;
+}
+
+/* Minimal, High-Performance EPK Audio Player */
+.epk-player-container {
+  font-family: 'Raleway', sans-serif;
+  background-color: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(155, 171, 198, 0.4);
+  backdrop-filter: blur(4px);
+  padding: 12px 20px;
+  margin: 15px auto;
+  max-width: 600px;
+  border-radius: 4px;
+}
+
+.epk-player-interface {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  height: 40px;
+}
+
+/* Button & Brand Control Vectors */
+.epk-control-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.epk-icon {
+  fill: #ff631c; /* Matches your brand orange */
+  width: 100%;
+  height: 100%;
+  transition: transform 0.1s ease;
+}
+
+.epk-control-btn:hover .epk-icon {
+  transform: scale(1.1);
+}
+
+/* Timeline & Scrubber Layout */
+.epk-timeline-track {
+  position: relative;
+  flex-grow: 1;
+  height: 6px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.epk-progress-bar {
+  height: 100%;
+  width: 0%;
+  background-color: #ff631c;
+  border-radius: 3px 0 0 3px;
+  pointer-events: none;
+}
+
+.epk-scrubber-handle {
+  position: absolute;
+  left: 0%;
+  width: 14px;
+  height: 14px;
+  background-color: #ff631c;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+  pointer-events: none;
+  transition: transform 0.1s ease;
+}
+
+.epk-timeline-track:hover .epk-scrubber-handle {
+  transform: translateX(-50%) scale(1.2);
 }
 
 iframe {
@@ -579,3 +660,72 @@ background-image: url("docs-floral-design.jpg");
 background-repeat: repeat-x;
 background-size: 500px 400px;
 }
+
+/* Responsive Press Photo Grid System */
+.photo-matrix-grid {
+  display: grid !important; /* Overrides default raw flex lines */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+  margin: 4vh auto;
+  box-sizing: border-box;
+}
+
+.photo-matrix-card {
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.photo-preview-wrapper {
+  width: 100%;
+  height: 200px; /* Constrains layouts to keep grid rows aligned */
+  overflow: hidden;
+  border-radius: 2px;
+  background-color: #1a1a1a;
+}
+
+.photo-preview-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Prevents raw image stretching or distorting */
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.photo-matrix-card:hover .photo-preview-wrapper img {
+  transform: scale(1.04);
+}
+
+/* Call to Action Booking Download Buttons */
+.photo-download-action-btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 16px;
+  width: 90%;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #ffffff !important;
+  background-color: #ff631c; /* Core Brand Accent Orange */
+  border-radius: 3px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.photo-download-action-btn:hover {
+  background-color: #e04f0ff;
+  transform: translateY(-1px);
+}
+
+.photo-download-action-btn:active {
+  transform: translateY(0);
+}
+#epkPhotos {
+display: flex;}

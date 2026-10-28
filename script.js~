@@ -47,26 +47,11 @@ function progressPlayhead() {
 //reset playhead
 }
 
-$("#musicPlayerEpk").click(function() {
+$("#musicPlayer, .musicPlayerEpk").click(function() {
   if ($("#musicPlayer_toolTip").is(":visible")) {
     $("#musicPlayer_toolTip").hide();
-//  buffer audio first
     aud.play();
-    playpauseButton.classList.add("fa");
-    playpauseButton.classList.add("fa-pause");
-    timeline.classList.add("musicPlayer_timeline");
-    playhead.classList.add("musicPlayer_playhead");
-  }
-});
-
-
-$("#musicPlayer").click(function() {
-  if ($("#musicPlayer_toolTip").is(":visible")) {
-    $("#musicPlayer_toolTip").hide();
-//  buffer audio first
-    aud.play();
-    playpauseButton.classList.add("fa");
-    playpauseButton.classList.add("fa-pause");
+    playpauseButton.classList.add("fa", "fa-pause");
     timeline.classList.add("musicPlayer_timeline");
     playhead.classList.add("musicPlayer_playhead");
   }
