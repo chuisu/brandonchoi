@@ -1,0 +1,581 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway|Fjalla+One|Indie+Flower');
+
+/* 
+html {
+background-image: url("blue-floral-design-4.jpg");
+background-size: 500px 400px;
+background-repeat: ;
+}
+*/
+
+body#mainBody {
+background-image: url("impression.jpg");
+background-repeat: no-repeat;
+background-color: #bdc7d1;
+background-position: top;
+margin: 0;
+}
+
+body#secondaryBody {
+background-image: url("secondaryImpression.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+margin: 0;
+}
+
+body#epkBody {
+background-image: url("impression.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+margin: 0;
+}
+
+
+body#docsBody {
+background-image: url("docs.png");
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+@media only screen and (max-width: 1000px) {
+body#mainBody {
+background-color: #2a2021;
+background-image: url("impression_mobile.jpg");
+background-position: top;
+background-size: 200%;
+/* background-position-y: -15vh; */
+}
+}
+
+@media only screen and (max-width: 1000px) {
+body#epkBody {
+background-color: #2a2021;
+background-image: url("impression_mobile.jpg");
+background-position: top;
+background-size: 200%;
+/* background-position-y: -15vh; */
+}
+}
+
+
+@media only screen and (max-width: 1000px) {
+body#secondaryBody {
+}
+}
+
+a, a:visited, a:hover {
+text-decoration: none;
+}
+
+#container {
+margin: -1vh -0.4vw 0 -0.4vw;
+height: 100%;
+min-height: 95vh;
+}
+
+#impression {
+}
+
+/* music player for desktops */
+@media only screen and (min-width: 1000px) {
+
+#musicPlayerBackground {
+margin: 0 auto;
+width: 48vw;
+}
+
+#musicPlayerBackgroundEpk {
+margin: 0 auto;
+}
+#musicPlayerBackground.sticky {
+position: fixed;
+top: 0px;
+/* left: -0.4vw; */
+margin: 0 25vw 0 26.4vw;
+}
+#musicPlayerBackgroundEpk.sticky {
+}
+
+}
+
+/* end music player for desktops */
+
+/* music player for phones */
+
+@media only screen and (max-width: 1000px) {
+#musicPlayerBackground {
+margin: 0 30px;
+}
+#musicPlayerBackgroundEpk {
+margin: 0 30px;}
+
+#musicPlayer {
+padding: 0 6.9vw;
+}
+
+#musicPlayerEpk {
+padding: 0 6.9vw;
+}
+
+#musicPlayerBackground.sticky {
+position: fixed;
+top: 0px;
+height: 6.9vh;
+width: 100%;
+margin: 0;
+}
+#musicPlayerBackgroundEpk.sticky {}
+
+#musicPlayer.sticky {
+padding: 0 6vw;
+}
+}
+
+/* end music player for phones */
+#musicPlayer {
+background-color: rgba(255,255,255,0.7);
+height: 6.9vh;
+text-align: center;
+display: flex;
+align-items: center;
+justify-content: center;
+padding-top: 1vh;
+}
+#musicPlayerEpk {
+background-color: rgba(255,255,255,0.7);
+height: 6.9vh;
+text-align: center;
+display: flex;
+align-items: center;
+justify-content: center;
+padding-top: 1vh;
+}
+
+#musicPlayerBackground {
+background-image: url("blue-floral-design-4.jpg");
+background-size: 500px 400px;
+background-repeat: repeat-x;
+}
+#musicPlayerBackgroundEpk {
+background-image: url("blue-floral-design-4.jpg");
+background-size: 500px 400px;
+background-repeat: repeat-x;
+}
+
+.musicPlayer_timeline {
+width: 90%;
+height: 2px;
+background-color: #ff631c;
+display: flex;
+align-items: center;
+}
+
+.musicPlayer_playhead {
+width: 5px;
+height: 16px;
+background-color: #ff631c;
+}
+
+@keyframes musicPlayer_toolTip {
+  to {
+    opacity: 0.3;
+    transform: translate3d(0, -5px, 0);
+  }
+}
+
+#musicPlayer_toolTip {
+display: flex;
+justify-content: center;
+font-family: Raleway;
+font-size: 8pt;
+font-weight: bold;
+height: inherit;
+}
+
+#musicPlayer_toolTip > div {
+  color: #ff631c;
+  font-size: 3.69vh;
+  font-family: 'Raleway';
+  margin: 8px 12px;
+  animation: musicPlayer_toolTip 0.7s infinite alternate;
+}
+#musicPlayer_toolTip > div:nth-child(2) {
+  animation-delay: 0.05s;
+}
+#musicPlayer_toolTip > div:nth-child(3) {
+  animation-delay: 0.1s;
+}
+#musicPlayer_toolTip > div:nth-child(4) {
+  animation-delay: 0.15s;
+}
+#musicPlayer_toolTip > div:nth-child(5) {
+  animation-delay: 0.2s;
+}
+#musicPlayer_toolTip > div:nth-child(6) {
+  animation-delay: 0.25s;
+}
+#musicPlayer_toolTip > div:nth-child(7) {
+  animation-delay: 0.3s;
+}
+#musicPlayer_toolTip > div:nth-child(8) {
+  animation-delay: 0.35s;
+}
+
+#musicPlayer_playpauseButton {
+color: #ff631c;
+margin: 0 16px 0 0;
+}
+
+iframe {
+display: flex;
+justify-content: flex-start;
+width: 100%;
+height: 420px;
+margin: 1vh 0 1vh 0;
+}
+
+#transition {
+opacity: 0; /* Initially hidden */
+transform: translateY(10vh); /* Start from below */
+transition: opacity 0.669s, transform 0.669s;
+}
+
+@media only screen and (min-width: 1000px) {
+#transition {
+margin: 0;
+padding: 10vh 0;
+background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgba(155, 171, 198, 0.3));
+}
+}
+
+@media only screen and (max-width: 1000px) {
+#transition {
+/* margin: 20vh 0 -8px 0; */
+height: 24vh;
+padding: 0 0;
+background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgba(155, 171, 198, 0.3));
+}
+}
+
+#name {
+letter-spacing: 0.5em;
+color: #ff631c;
+background-color: rgba(155, 171, 198, 0.69);}
+
+/* brief description for desktops */
+@media only screen and (min-width: 1000px) {
+#briefDescription {
+position: absolute;
+top: 60px;
+width: 100%;
+display: flex;
+justify-content: center;
+font-family: Raleway;
+letter-spacing: 0.66vw;
+font-weight: bold;
+font-size: 0.82vw;
+color: #ff8300;
+text-shadow: -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #000, 0.5px 0.5px 0 #000;
+}
+
+#briefDescription ul {
+padding: 0;
+display: flex;
+justify-content: space-between;
+}
+
+#briefDescription ul li {
+list-style-type: none;
+display: inline;
+margin: 0 1vw;
+}
+}
+/* end brief description for desktops */
+
+/* brief description for phones */
+@media only screen and (max-width: 1000px) {
+#briefDescription {
+margin: 0 30px;
+font-family: Raleway;
+font-weight: bold;
+font-size: 2vw;
+letter-spacing: 0.68vw;
+color: #ff8300;
+text-shadow: -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #000, 0.5px 0.5px 0 #000;
+}
+
+#briefDescription ul {
+padding: 0;
+display: flex;
+justify-content: space-between;
+}
+
+#briefDescription ul li {
+list-style-type: none;
+display: inline;
+padding: 0;
+}
+}
+/* end brief description for phones*/
+
+#top {
+text-align: right;
+/*background-color: red;*/
+background-image: url("blue-floral-design-4.jpg");
+background-size: 500px 400px;
+background-repeat: repeat-x;
+height: 40px;
+display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+#top {
+display: none;
+}
+}
+
+#secondaryTop {
+text-align: right;
+/*background-color: red;*/
+background-image: url("green-floral-design.jpg");
+background-size: 500px 400px;
+background-repeat: repeat-x;
+height: 40px;
+}
+
+#docsTop {
+text-align: right;
+/*background-color: red;*/
+background-image: url("docs-floral-design.jpg");
+background-size: 500px 400px;
+background-repeat: repeat-x;
+height: 40px;
+}
+
+/* nav and social for desktops */
+@media only screen and (min-width: 1000px) {
+#nav {
+width: 48vw;
+background-color: black;
+text-align: center;
+display: flex;
+justify-content: flex-start;
+margin: 0 auto;
+}
+
+#social {
+width: 48vw;
+margin: 0 auto;
+background: white;
+text-align: right;
+display: flex;
+justify-content: flex-end;
+}
+
+#socialIcons {
+margin-right: 1vw;
+}
+
+#nav ul li a {
+font-size: 20px;
+}
+
+}
+
+/* nav and social for phones */
+@media only screen and (max-width: 1000px) {
+#nav {
+background-color: black;
+text-align: center;
+display: flex;
+justify-content: space-around;
+margin: 0 30px;
+}
+
+#social {
+margin: 0 30px;
+background: white;
+text-align: right;
+display: flex;
+justify-content: flex-end;
+}
+
+#socialIcons {
+margin-right: 1vw;
+}
+
+#nav ul li a {
+font-size: 4vw;
+}
+}
+
+div#nav ul {
+padding: 0 0 0 0;
+}
+
+#nav ul li, #secondaryNav ul li, #socialIcons ul li{
+list-style-type: none;
+display: inline;
+margin: 0 1vw;
+}
+
+#nav ul li a, #secondaryNav ul li a, #nav ul li a:visited, #secondaryNav ul li a:visited, #nav ul li a:hover, #secondaryNav ul li a:hover {
+color: white;
+font-family: 'Raleway', sans-serif;
+letter-spacing: 4px;
+/* text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
+}
+
+#secondaryNav {
+background-color: black;
+text-align: center;
+margin: 0;
+}
+
+div#secondaryNav ul {
+padding: 0;
+margin: 0;
+}
+
+#mainTitle {
+opacity: 0; /* Initially hidden */
+transform: translateY(30px); /* Slight lift */
+transition: opacity 0.669s, transform 0.669s;
+}
+
+/* mainTitle for desktops */
+@media only screen and (min-width: 1000px) {
+#mainTitle {
+margin: 20vh 35vw 0 35vw;
+}
+}
+/* end mainTitle for desktops */
+
+/* mainTitle for phones */
+@media only screen and (max-width: 1000px) {
+#mainTitle {
+margin: 20vh 0 0 0;
+}
+}
+/* end mainTitle for phones */
+
+.primaryContent {
+font-family: Raleway;
+color: white;
+}
+
+section.primaryContent {
+margin: 5vh 0 5vh 0;
+}
+
+h3.primaryContent {
+letter-spacing: 1em;
+}
+
+.secondaryContent {
+line-height: 2em;
+font-family: Raleway;
+color: white;
+}
+
+ul.secondaryContent {
+list-style-type: none;
+}
+
+li a, li a:visited, li a:hover {
+color: orange;
+}
+
+.tertiaryContent {
+line-height: 2em;
+font-family: Raleway;
+color: black;
+
+}
+
+#contentContainer {
+margin: 0;
+background-color: rgba(155, 171, 198, 0.3);
+opacity: 0; /* Initially hidden */
+margin-top: 10vh; /* Start from below */
+transition: opacity 0.669s, transform 0.669s;
+}
+
+#secondaryContentContainer {
+margin: 0;
+padding: 30vh 0;
+}
+
+@media only screen and (max-width: 1000px) {
+#main {
+margin: 0 30px;
+padding: 4vh 4vw; 
+background-color: rgba(0,0,0,0.3);
+}
+}
+
+@media only screen and (min-width: 1000px) {
+#main {
+margin: 0 auto;
+width: 40vw;
+padding: 4vh 4vw; 
+background-color: rgba(0,0,0,0.3);
+}
+}
+
+@media only screen and (max-width: 1000px) {
+#secondaryMain {
+margin: 0 30px;
+padding: 4vh 4vw; 
+background-color: rgba(0,0,0,0.3);
+}
+}
+
+@media only screen and (min-width: 1000px) {
+#secondaryMain {
+margin: 0 auto;
+width: 40vw;
+padding: 4vh 4vw; 
+background-color: rgba(0,0,0,0.3);
+}
+}
+
+#socialIcons {
+}
+
+#socialIcons ul {
+}
+
+#footerContainer {
+z-index: -1;
+background-color: rgba(155, 171,198, 0.3);
+width: 100%;
+padding: 20vh 0 0 0;
+margin: 0 0 -10px 0;
+}
+
+
+#footer {
+z-index: -1;
+height: 66px;
+width: 100%;
+background-image: url("blue-floral-design-4.jpg");
+background-repeat: repeat-x;
+background-size: 500px 400px;
+}
+
+#footerSecondary {
+height: 66px;
+width: 100%;
+background-image: url("green-floral-design.jpg");
+background-repeat: repeat-x;
+background-size: 500px 400px;
+}
+
+#footerDocs {
+height: 66px;
+width: 100%;
+background-image: url("docs-floral-design.jpg");
+background-repeat: repeat-x;
+background-size: 500px 400px;
+}

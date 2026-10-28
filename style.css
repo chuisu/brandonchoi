@@ -23,6 +23,14 @@ background-size: cover;
 margin: 0;
 }
 
+body#epkBody {
+background-image: url("impression.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+margin: 0;
+}
+
+
 body#docsBody {
 background-image: url("docs.png");
 background-repeat: no-repeat;
@@ -38,6 +46,17 @@ background-size: 200%;
 /* background-position-y: -15vh; */
 }
 }
+
+@media only screen and (max-width: 1000px) {
+body#epkBody {
+background-color: #2a2021;
+background-image: url("impression_mobile.jpg");
+background-position: top;
+background-size: 200%;
+/* background-position-y: -15vh; */
+}
+}
+
 
 @media only screen and (max-width: 1000px) {
 body#secondaryBody {
@@ -56,6 +75,7 @@ min-height: 95vh;
 
 #impression {
 }
+
 /* music player for desktops */
 @media only screen and (min-width: 1000px) {
 
@@ -64,11 +84,16 @@ margin: 0 auto;
 width: 48vw;
 }
 
+#musicPlayerBackgroundEpk {
+margin: 0 auto;
+}
 #musicPlayerBackground.sticky {
 position: fixed;
 top: 0px;
 /* left: -0.4vw; */
 margin: 0 25vw 0 26.4vw;
+}
+#musicPlayerBackgroundEpk.sticky {
 }
 
 }
@@ -81,8 +106,14 @@ margin: 0 25vw 0 26.4vw;
 #musicPlayerBackground {
 margin: 0 30px;
 }
+#musicPlayerBackgroundEpk {
+margin: 0 30px;}
 
 #musicPlayer {
+padding: 0 6.9vw;
+}
+
+.musicPlayerEpk {
 padding: 0 6.9vw;
 }
 
@@ -93,6 +124,7 @@ height: 6.9vh;
 width: 100%;
 margin: 0;
 }
+#musicPlayerBackgroundEpk.sticky {}
 
 #musicPlayer.sticky {
 padding: 0 6vw;
@@ -109,8 +141,22 @@ align-items: center;
 justify-content: center;
 padding-top: 1vh;
 }
+.musicPlayerEpk {
+background-color: rgba(255,255,255,0.7);
+height: 6.9vh;
+text-align: center;
+display: flex;
+align-items: center;
+justify-content: center;
+padding-top: 1vh;
+}
 
 #musicPlayerBackground {
+background-image: url("blue-floral-design-4.jpg");
+background-size: 500px 400px;
+background-repeat: repeat-x;
+}
+#musicPlayerBackgroundEpk {
 background-image: url("blue-floral-design-4.jpg");
 background-size: 500px 400px;
 background-repeat: repeat-x;
@@ -180,6 +226,14 @@ color: #ff631c;
 margin: 0 16px 0 0;
 }
 
+iframe {
+display: flex;
+justify-content: flex-start;
+width: 100%;
+height: 420px;
+margin: 1vh 0 1vh 0;
+}
+
 #transition {
 opacity: 0; /* Initially hidden */
 transform: translateY(10vh); /* Start from below */
@@ -202,6 +256,11 @@ padding: 0 0;
 background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgba(155, 171, 198, 0.3));
 }
 }
+
+#name {
+letter-spacing: 0.5em;
+color: #ff631c;
+background-color: rgba(155, 171, 198, 0.69);}
 
 /* brief description for desktops */
 @media only screen and (min-width: 1000px) {

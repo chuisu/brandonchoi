@@ -1,5 +1,7 @@
 var header1 = document.getElementById("musicPlayer");
+var header1Epk = document.getElementById("musicPlayerEpk");
 var header2 = document.getElementById("musicPlayerBackground");
+var header2Epk = document.getElementById("musicPlayerBackgroundEpk");
 var sticky1 = header1.offsetTop;
 var sticky2 = header2.offsetTop;
 var aud = document.getElementById("musicPlayer_audio"); 
@@ -44,6 +46,19 @@ function progressPlayhead() {
 //pause
 //reset playhead
 }
+
+$(".musicPlayerEpk").click(function() {
+  if ($("#musicPlayer_toolTip").is(":visible")) {
+    $("#musicPlayer_toolTip").hide();
+//  buffer audio first
+    aud.play();
+    playpauseButton.classList.add("fa");
+    playpauseButton.classList.add("fa-pause");
+    timeline.classList.add("musicPlayer_timeline");
+    playhead.classList.add("musicPlayer_playhead");
+  }
+});
+
 
 $("#musicPlayer").click(function() {
   if ($("#musicPlayer_toolTip").is(":visible")) {
