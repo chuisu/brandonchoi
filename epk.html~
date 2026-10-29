@@ -40,7 +40,7 @@
     </div>
   </div>
 </div>
-	<h3 class="secondaryContent">Duo Sample</h3>
+	<h3 class="secondaryContent">Kass (Legend of Zelda) - (3:02)</h3>
 <div class="epk-player-container">
   <audio class="epk-audio-source" src="101726_kass.mp3" preload="metadata"></audio>
   <div class="epk-player-interface">
@@ -92,7 +92,7 @@
   <!-- Photo Item 2 (Vertical Press Portrait) -->
   <div class="photo-matrix-card">
     <div class="photo-preview-wrapper">
-      <img src="images/brandon-choi-portrait-vertical-thumb.jpg" alt="Brandon Choi - Press Portrait" loading="lazy">
+      <img src="impression_mobile.jpg" alt="Brandon Choi - Press Portrait" loading="lazy">
     </div>
     <a href="images/brandon-choi-portrait-vertical-highres.jpg" download class="photo-download-action-btn">
       Download High-Res (Portrait)
