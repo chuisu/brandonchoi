@@ -30,6 +30,10 @@ background-size: cover;
 margin: 0;
 }
 
+#epkBody h3.primaryContent {
+margin: 6vh auto;
+}
+
 
 body#docsBody {
 background-image: url("docs.png");
@@ -236,6 +240,12 @@ margin: 0 16px 0 0;
   margin: 15px auto;
   max-width: 600px;
   border-radius: 4px;
+  text-align: center;
+  color: #ff631c;
+}
+
+.epk-player-container h3 {
+margin: 0 auto;
 }
 
 .epk-player-interface {
@@ -444,7 +454,7 @@ justify-content: flex-start;
 margin: 0 auto;
 }
 
-#social {
+#social, #socialEpk {
 width: 48vw;
 margin: 0 auto;
 background: white;
@@ -453,8 +463,14 @@ display: flex;
 justify-content: flex-end;
 }
 
+#socialEpk {
+text-align: center;
+justify-content: center;
+}
 #socialIcons {
 margin-right: 1vw;
+}
+#socialIconsEpk {
 }
 
 #nav ul li a {
@@ -494,7 +510,7 @@ div#nav ul {
 padding: 0 0 0 0;
 }
 
-#nav ul li, #secondaryNav ul li, #socialIcons ul li{
+#nav ul li, #secondaryNav ul li, #socialIcons ul li, #socialIconsEpk ul li {
 list-style-type: none;
 display: inline;
 margin: 0 1vw;
@@ -702,10 +718,10 @@ background-size: 500px 400px;
 }
 
 /* Call to Action Booking Download Buttons */
-.photo-download-action-btn {
+.photo-download-action-btn, .mp3-download-action-btn {
   display: inline-block;
   margin-top: 12px;
-  padding: 8px 16px;
+  padding: 1vh 1vw;
   width: 90%;
   text-align: center;
   font-family: 'Raleway', sans-serif;
@@ -714,17 +730,22 @@ background-size: 500px 400px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   color: #ffffff !important;
-  background-color: #ff631c; /* Core Brand Accent Orange */
+  background-color: #ff631c; 
   border-radius: 3px;
   transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
-.photo-download-action-btn:hover {
+.mp3-download-action-btn {
+color: #ff631c !important;
+background-color: #ffffff;
+}
+
+.photo-download-action-btn:hover, .mp3-download-action-btn:hover {
   background-color: #e04f0ff;
   transform: translateY(-1px);
 }
 
-.photo-download-action-btn:active {
+.photo-download-action-btn:active, .mp3-download-action-btn:active {
   transform: translateY(0);
 }
 #epkPhotos {
